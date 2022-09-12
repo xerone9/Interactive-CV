@@ -1,0 +1,1675 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+             body{
+                margin: 0;
+            }
+
+            p{
+                margin: 0;                
+            }
+
+            a{
+                cursor: pointer;  
+                color: inherit; 
+                text-decoration: none;           
+            }
+
+            li{
+                padding-bottom: 5px;
+                padding-left: 25px;
+            }
+
+            li span {
+                position: relative;
+                left: -10px;                
+            }
+
+            .si{
+                padding: 0;
+                padding-top: 7px;
+                padding-left: 5px;
+            }            
+
+            .column{
+                display: flex;
+                flex-direction: row;
+            }
+
+            .column1{
+                flex: 1;
+                min-width: 325px;  
+                margin-top: 10px;              
+            }
+
+            .column2{
+                flex: 4;
+                padding-right: 6px;
+                margin-top: 10px;
+            }
+
+            .column3{
+                flex: 1;
+                min-width: 325px;
+                margin-top: 10px;
+                margin-right: 10px;
+            }
+
+            .carrier_objective_heading, .other_heading{
+                display: flex;
+                flex-direction: row; 
+                min-width: 350px;               
+                margin: 0;                
+                padding-left: 5px;
+                color: rgb(255, 255, 255);
+                font-size: 40px;  
+                border-radius: 10px;
+                background-image: linear-gradient(to right, #000000, #331019, #240c12, #3a0d18, #c20023, #c20023, #c20023, #c20023, #3a0d18, #240c12, #331019, #000000);
+                             
+            }            
+
+            .carrier_objective_heading:hover, .other_heading:hover{
+                color: white;
+                background: black;
+                                
+            }
+
+            .objective_text{
+                display: flex;
+                flex: 2;
+                font-size: 30px;
+                color: black;
+                padding-right: 40px;
+                padding-left: 15px;
+                margin-bottom: 0px;                                           
+            }
+
+            .qualification_heading{
+                display: flex;
+                flex-direction: row;                                                              
+            }
+
+            .qualification_detail{
+                display: none;  
+                                                                                           
+            }
+
+            .grand_detail{
+                display: flex;
+                flex-direction: column;                                                                             
+            }
+
+            .graduation_detail{
+                display: flex;
+                flex-direction: row;                                                                             
+            }
+
+            .qualification_sub_detail{   
+                flex-direction: row;             
+                font-size: 20px;
+                margin-left: 50px;
+                margin-right: 50px;                
+            }
+
+            .qualification_sub_detail_ask{  
+                flex-direction: row;             
+                font-size: 25px;
+                margin-left: 50px;
+                margin-right: 5px; 
+                margin-bottom: 10px;
+                font-weight: bold;
+            }
+
+            .qualification_sub_detail_reply{  
+                flex-direction: row;             
+                font-size: 25px;
+                margin-right: 50px; 
+                color: blue; 
+                font-style: italic;
+            }
+
+            .qualification_text, .matric_text, .inter_text, .graduation_text, .masters_text{
+                display: flex;
+                flex: 1;
+                font-size: 30px;
+                color: black;
+                padding-right: 15px; 
+                padding-left: 15px; 
+                margin: 0;                                                         
+            }  
+
+            .job_sub_heading_text{
+                display: flex;
+                flex: 1;
+                font-size: 35px;
+                color: black;
+                padding-right: 15px; 
+                padding-left: 70px; 
+                text-decoration: underline;
+  	            text-decoration-color: blue;
+                margin: 0;
+                margin-bottom: 10px;                                                         
+            }  
+
+            .job_description_text{
+                flex-direction: row;             
+                font-size: 25px;
+                margin-left: 300px;
+                margin-right: 5px;                                                                       
+            }  
+            
+            
+            .job_text, .microsystem_text, .indus_text{
+                display: flex;
+                flex: 1;
+                font-size: 30px;
+                color: black;
+                padding-right: 15px;  
+                padding-left: 15px;
+                margin: 0;                                                         
+            }   
+
+            .skill_text{
+                display: flex;
+                flex-direction: column;
+                flex: 3;
+                font-size: 30px;
+                color: black;                
+                margin: 0; 
+                                                                         
+            }
+
+            .skill_text2{
+                display: flex;
+                flex-direction: column;
+                flex: 3;
+                font-size: 30px;
+                color: black;
+                justify-content: end;                                                                      
+            }
+
+
+            
+            .project_text{
+                display: flex;
+                flex-direction: column;
+                padding-left: 15px;
+                padding-right: 15px;
+                font-size: 21px;
+                color: black;
+                margin: 0;                                                         
+            }   
+            
+
+            .qualification_Year{
+                display: flex;
+                flex: 1;
+                font-size: 30px;
+                color: black;
+                padding-right: 40px; 
+                justify-content: end;                                        
+            }
+
+            .CV_Heading_Style{
+                display: flex; 
+                height: 75px; 
+                margin-left: 14%;
+                max-width: 70%;              
+                color: white;
+                background-image: linear-gradient(to right, #000000, #2e2e2e, #585858, #878787, #b9b9b9, #b9b9b9, #b9b9b9, #b9b9b9, #878787, #585858, #2e2e2e, #000000);
+                font-weight: bold;
+                font-size: 40px;
+                align-items: center;  
+                justify-content: center;
+            }
+
+            .CV_background{
+                background-color: black;
+            }
+
+            .CV_Heading_Style:hover{
+                content: "Interactive CV";
+                font-size: 40px;
+                color: #fff;
+                background-color: black;
+                text-align: center;
+                animation: glow 1s ease-in-out infinite;
+            }
+
+            @-webkit-keyframes glow {
+                from {
+                    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #1700e6, 0 0 40px #0f00e6, 0 0 50px #1700e6, 0 0 60px #0400e6, 0 0 70px #0f00e6;
+                }
+                to {
+                    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #1700e6, 0 0 40px #0f00e6, 0 0 50px #1700e6, 0 0 60px #0400e6, 0 0 70px #0f00e6;
+                }
+            }
+
+            .CV_Heading_Style2{
+                display: none; 
+                height: 75px;               
+                color: rgb(0, 0, 0);
+                background-color: rgb(143, 143, 143);
+                font-weight: bold;
+                font-size: 40px;
+                align-items: center;  
+                justify-content: center;
+                font-size: 40px;
+                color: #fff;
+                background-color: black;
+                text-align: center;
+                animation: glow 1s ease-in-out infinite;
+            }
+
+            @-webkit-keyframes glow {
+                from {
+                    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #1700e6, 0 0 40px #0f00e6, 0 0 50px #1700e6, 0 0 60px #0400e6, 0 0 70px #0f00e6;
+                }
+                to {
+                    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #1700e6, 0 0 40px #0f00e6, 0 0 50px #1700e6, 0 0 60px #0400e6, 0 0 70px #0f00e6;
+                }
+            }
+
+            .pic{
+                margin-left: 55px; 
+                height:200px;
+                width:200px;
+                border-radius: 50%;               
+            }
+
+            .name{
+                font-weight: bold;
+                font-style: italic;  
+                font-size: 30px;
+                margin-bottom: 30px;
+                margin-left: 10px;             
+            }
+
+            .contact_heading{
+                display: flex;
+                flex-direction: row;                
+                width: 220px;
+                margin: 0;
+                margin-left: 35px;
+                padding-left: 25px;
+                color: black;
+                background-color: rgb(212, 212, 212);
+                font-size: 40px;                
+                margin-bottom: 15px;
+                border-radius: 15%;                
+            }
+
+            .contact_details{
+                display: flex;
+                flex-direction: column;                
+                width: 220px;
+                margin: 0;
+                margin-left: 25px;
+                padding-left: 25px;
+                color: black;
+                font-size: 22px;
+                margin-bottom: 30px;                
+                border-radius: 15%;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .language_heading{
+                display: flex;
+                flex-direction: row;                
+                width: 295px;
+                margin: 0;
+                color: white;
+                background-color: black;
+                font-size: 40px;
+                margin-top: 30px;
+                margin-left: 10px;
+                border-radius: 7px;
+                margin-bottom: 7px;                
+            }
+
+            .project_heading{
+                display: flex;
+                flex-direction: row;
+                margin: 0;
+                color: white;
+                background-color: black;
+                font-size: 40px;
+                margin-left: 10px;
+                border-radius: 7px;
+                margin-bottom: 20px; 
+                align-items: center;
+                justify-content: center;               
+            }
+
+            .language_details_row{
+                margin: 0;
+                display: flex;
+                flex-direction: row;  
+            }
+
+            .language_name{
+                width: 180px;
+                margin: 0;
+                margin-left: 9px;
+                padding-left: 9px;
+                color: black;
+                font-size: 22px;
+                margin-top: 10px;
+                margin-bottom: 0px;                
+                border-radius: 15%;  
+            }
+
+            .language_details_name{
+                width: 180px;
+                margin: 0;
+                margin-left: 32px;
+                padding-right: 0px;
+                color: black;
+                font-size: 18px;
+                font-weight: bold;
+                font-style: italic;
+                margin-top: 3px;
+                border-radius: 15%;  
+            }
+
+            .language_percent{
+                width: 50px;
+                margin: 0;
+                margin-left: 2px;
+                padding-left: 2px;
+                color: black;
+                font-size: 22px;
+                margin-top: 10px;
+                border-radius: 15%;  
+            }
+
+            .python, .wordpress, .apex, .sql, .kotlin, .html, .php, .java, .cplusplus, .ninty-nine, .seventy-five, .twenty-five{
+                position: relative;
+                margin-top: 13px;
+                height: 10px;
+                width: 30%;
+                border: 3px solid #000000;
+                border-radius: 15px;
+            }
+
+            .ninty-nine, .seventy-five, .twenty-five, .fifty, .ten{
+                position: relative;
+                margin-top: 5px;
+                height: 7px;
+                width: 25%;
+                border: 3px solid #000000;
+                border-radius: 15px;
+            }
+
+            .ninty-nine .ninty-ninecolor{
+                position: absolute;
+                background-color: #00df0b;
+                width: 90%;
+                height: 7px;
+                border-radius: 15px;
+                animation: progres 4s;    
+            }
+            @keyframes progres{
+                0%{
+                width: 0%;
+                }
+                90%{
+                    width: 90%;
+                }
+            }
+
+            .seventy-five .seventy-fivecolor{
+                position: absolute;
+                background-color: #00df0b;
+                width: 75%;
+                height: 7px;
+                border-radius: 15px;
+                animation: progres 4s;    
+            }
+            @keyframes progres{
+                0%{
+                width: 0%;
+                }
+                75%{
+                    width: 75%;
+                }
+            }
+
+            .twenty-five .twenty-fivecolor{
+                position: absolute;
+                background-color: #ff0000;
+                width: 25%;
+                height: 7px;
+                border-radius: 15px;
+                animation: progres 4s;    
+            }
+            @keyframes progres{
+                0%{
+                width: 0%;
+                }
+                25%{
+                    width: 25%;
+                }
+            }
+
+            .fifty .fiftycolor{
+                position: absolute;
+                background-color: #ffbb00;
+                width: 50%;
+                height: 7px;
+                border-radius: 15px;
+                animation: progres 4s;    
+            }
+            @keyframes progres{
+                0%{
+                width: 0%;
+                }
+                50%{
+                    width: 50%;
+                }
+            }
+
+            .ten .tencolor{
+                position: absolute;
+                background-color: #ff0000;
+                width: 10%;
+                height: 7px;
+                border-radius: 15px;
+                animation: progres 4s;    
+            }
+            @keyframes progres{
+                0%{
+                width: 0%;
+                }
+                10%{
+                    width: 10%;
+                }
+            }
+
+            .python .pythoncolor{
+                position: absolute;
+                background-color: #00df0b;
+                width: 60%;
+                height: 10px;
+                border-radius: 15px;
+                animation: progres 4s;    
+            }
+            @keyframes progres{
+                0%{
+                width: 0%;
+                }
+                25%{
+                    width: 60%;
+                }
+            }
+
+            .wordpress .wordpresscolor{
+                position: absolute;
+                background-color: #00df0b;
+                width: 50%;
+                height: 10px;
+                border-radius: 15px;
+                animation: progres 4s;    
+            }
+            @keyframes progres{
+                0%{
+                width: 0%;
+                }
+                25%{
+                    width: 50%;
+                }
+            }
+
+            .apex .apexcolor{
+                position: absolute;
+                background-color: #eb9d5d;
+                width: 30%;
+                height: 10px;
+                border-radius: 15px;
+                animation: progres 4s;    
+            }
+            @keyframes progres{
+                0%{
+                width: 0%;
+                }
+                25%{
+                    width: 30%;
+                }
+            }
+
+            .sql .sqlcolor{
+                position: absolute;
+                background-color: #eb9d5d;
+                width: 25%;
+                height: 10px;
+                border-radius: 15px;
+                animation: progres 4s;    
+            }
+            @keyframes progres{
+                0%{
+                width: 0%;
+                }
+                25%{
+                    width: 25%;
+                }
+            }
+
+            .kotlin .kotlincolor{
+                position: absolute;
+                background-color: #eb9d5d;
+                width: 25%;
+                height: 10px;
+                border-radius: 15px;
+                animation: progres 4s;    
+            }
+            @keyframes progres{
+                0%{
+                width: 0%;
+                }
+                25%{
+                    width: 25%;
+                }
+            }
+
+            .html .htmlcolor{
+                position: absolute;
+                background-color: #ff0000;
+                width: 20%;
+                height: 10px;
+                border-radius: 15px;
+                animation: progres 4s;    
+            }
+            @keyframes progres{
+                0%{
+                width: 0%;
+                }
+                25%{
+                    width: 20%;
+                }
+            }
+
+            .php .phpcolor{
+                position: absolute;
+                background-color: #ff0000;
+                width: 20%;
+                height: 10px;
+                border-radius: 15px;
+                animation: progres 4s;    
+            }
+            @keyframes progres{
+                0%{
+                width: 0%;
+                }
+                25%{
+                    width: 20%;
+                }
+            }
+
+            .java .javacolor{
+                position: absolute;
+                background-color: #ff0000;
+                width: 12%;
+                height: 10px;
+                border-radius: 15px;
+                animation: progres 4s;    
+            }
+            @keyframes progres{
+                0%{
+                width: 0%;
+                }
+                25%{
+                    width: 12%;
+                }
+            }
+
+            .cplusplus .cpluspluscolor{
+                position: absolute;
+                background-color: #ff0000;
+                width: 7%;
+                height: 10px;
+                border-radius: 15px;
+                animation: progres 4s;    
+            }
+            @keyframes progres{
+                0%{
+                width: 0%;
+                }
+                25%{
+                    width: 7%;
+                }
+            }
+
+            /* .cv-triangle {
+                display: flex;
+                flex: 1;
+                margin:0;                
+                width: 0;
+                height: 0;
+                border-right: 0x solid transparent;
+                border-top-right-radius: 75px 100%;
+                border-left: 50px solid transparent;
+                border-top: 50px solid rgb(252, 255, 84);                
+            } */
+
+            .python-triangle {
+                margin:0;
+                margin-left: 0px;
+                width: 0;
+                height: 0;
+                border-left: 1px solid transparent;
+                border-right: 50px solid transparent;
+                border-top: 50px solid rgb(53, 114, 165);
+            }
+
+            .kotlin-triangle {
+                margin:0;
+                margin-left: 0px;
+                width: 0;
+                height: 0;
+                border-left: 1px solid transparent;
+                border-right: 50px solid transparent;
+                border-top: 50px solid rgb(169, 123, 255);
+            }
+
+            .html-triangle {
+                margin:0;
+                margin-left: 0px;
+                width: 0;
+                height: 0;
+                border-left: 1px solid transparent;
+                border-right: 50px solid transparent;
+                border-top: 50px solid rgb(227, 76, 38);
+            }
+
+            .project_name{
+                display: flex;
+                flex-direction: row;
+                font-size: 40px;
+                margin-bottom: 0px;
+                margin-top: 0px;
+                margin-right: 0px;
+                margin-left: 0px;
+            }
+
+            .codes_availabe_here{
+                margin-top: 30px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center; 
+                font-size: 22px;        
+            }
+
+            .github-buttons{
+                height: 40px;
+                width: 125px;
+                margin-top: 12px;
+                font-family: Michroma;
+                font-size: 22px;
+                background-color: white;
+                color: black;
+                margin-right: 5px;
+                border-radius: 20px;
+                cursor: pointer;
+                transition: color 0.15s
+            }
+
+            .github-buttons:hover {
+                color: white;
+                background-color: black;
+                opacity: 0.9;
+            }
+
+            .github-buttons:active {
+                background-color: white;
+                color: blue;
+            }
+
+            .python_border, .android_border, .html_border, .div_border { 
+                margin: 0;               
+                border-width: 1px;                
+                margin-left: 10px;
+                margin-top: 10px;
+            }
+
+            .div_border, .objective_border { 
+                margin: 0;               
+                border-width: 1px;                
+                margin-left: 10px; 
+                margin-bottom: 25px;
+                border-radius: 10px;          
+            }
+
+            .skill_border { 
+                margin: 0;               
+                border-width: 1px;                
+                margin-left: 10px; 
+                margin-bottom: 0px;
+                border-radius: 10px;          
+            }
+
+            .div_border_adv { 
+                display: flex;
+                flex-direction: row; 
+                background: linear-gradient(90deg, black, white 75%);            
+            }
+
+            .div_border_adv:hover { 
+                background: linear-gradient(90deg, black 50%, white 50%);            
+            }
+
+            .div_border_max_adv { 
+                display: flex;                
+                flex: 1;
+                flex-direction: row; 
+                                          
+            }
+
+            .python_border:hover { 
+                border-color: rgb(53, 114, 165);                              
+                border-style: double;                
+            }
+
+            .android_border:hover { 
+                border-color: rgb(169, 123, 255);                              
+                border-style: double;                
+            }
+
+            .html_border:hover { 
+                border-color: rgb(227, 76, 38);                              
+                border-style: double;                
+            }
+
+            .div_border:hover, .objective_border:hover{ 
+                border-color: black;
+                border-style: double; 
+            }
+
+            .skill_border:hover { 
+                border-color: black;                              
+                border-style: double;                
+            }
+
+            /* .matric_text:hover, .inter_text:hover, .graduation_text:hover, .masters_text:hover, .microsystem_text:hover, .indus_text:hover {
+                display: inline-block;
+                position: relative;
+                margin: 0;
+                margin-bottom: 10px;
+                color: white;     
+                background-color: blue;  
+                margin-top: 10px;
+                margin-left: 10px;         
+                font-size: 40px;
+                border-radius: 10px;                
+            } */
+/* 
+            .matric_text:hover, .inter_text:hover, .graduation_text:hover, .masters_text:hover, .microsystem_text:hover, .indus_text:hover {
+                display: inline-block;
+                position: relative;
+                margin: 0;
+                margin-bottom: 10px;
+                color: white;     
+                background-color: blue;  
+                margin-top: 10px;
+                margin-left: 10px;         
+                font-size: 40px;
+                border-radius: 10px;                
+            } */
+
+            /* .matric_text:hover, .inter_text:hover, .graduation_text:hover, .masters_text:hover, .microsystem_text:hover, .indus_text:hover {
+                display: inline-block;
+                position: relative;
+                margin: 0;
+                margin-bottom: 10px;
+                color: black;                
+                font-size: 40px;                
+            }
+
+            .matric_text:after, .inter_text:after, .graduation_text:after, .masters_text:after, .microsystem_text:after, .indus_text:after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                transform: scaleX(0);
+                height: 2px;
+                bottom: 0;
+                left: 0;
+                background-color:#0087ca;
+                transform-origin: bottom right;
+                transition: transform 0.25s ease-out;
+            }
+
+            .matric_text:after {
+                width: 40%;                
+            }
+
+            .inter_text:after {
+                width: 37%;                
+            }
+
+            .graduation_text:after {
+                width: 32%;                
+            }
+
+            .masters_text:after {
+                width: 21%;                
+            }
+
+            .microsystem_text:after {
+                width: 75%;                
+            }
+
+            .indus_text:after {
+                width: 47%;                
+            }
+
+            .matric_text:hover:after, .inter_text:hover:after, .graduation_text:hover:after, .masters_text:hover:after, .microsystem_text:hover:after, .indus_text:hover:after {
+                transform: scaleX(1);
+                transform-origin: bottom left;                
+            } */
+            
+            .gradient-border {
+                margin-top: 5px;
+                margin-left: 5px;
+                --border-width: 3px;
+                position: relative;
+                text-transform: uppercase;
+                display: none;
+                justify-content: center;
+                align-items: center;
+                width: 99%;
+                height: 75px;
+                font-size: 40px;
+                color: white;
+                background: #222;
+                
+            }
+
+            .gradient-border::after {
+                position: absolute;
+                content: "";
+                top: calc(-1 * var(--border-width));
+                left: calc(-1 * var(--border-width));
+                z-index: -1;
+                width: calc(100% + var(--border-width) * 2);
+                height: calc(100% + var(--border-width) * 2);
+                background: linear-gradient(
+                    60deg,
+                    hsl(224, 85%, 66%),
+                    hsl(269, 85%, 66%),
+                    hsl(314, 85%, 66%),
+                    hsl(359, 85%, 66%),
+                    hsl(44, 85%, 66%),
+                    hsl(89, 85%, 66%),
+                    hsl(134, 85%, 66%),
+                    hsl(179, 85%, 66%)
+                    ); 
+                border-radius: var(--border-width);
+                background-size: 300% 300%;
+                background-position: 0 50%;
+                border-radius: calc(2 * var(--border-width));
+                animation: moveGradient 4s alternate infinite;
+                }            
+
+            @keyframes moveGradient {
+                50% {
+                    background-position: 100% 50%;
+                }
+            }
+
+            .ispython{
+                margin: 0;
+                display: none;
+                flex-direction: row;
+                margin-top: 3px;
+                margin-left: 20px;
+                color: rgb(53, 114, 165);
+            }
+
+            .iskotlin, .isjava{
+                margin: 0;
+                display: none;
+                margin-bottom: 10px;
+                font-size: 18px;
+                font-style: italic;
+                color: rgb(169, 123, 255);
+                justify-content: flex-end;
+                padding-right: 30px;
+            }
+            
+            .iskotlin{
+                color: rgb(169, 123, 255);                
+            }
+
+            .isjava{
+                color: rgb(176, 114, 25);                
+            }
+            
+            .skill_detail{
+                display: none;
+                flex-direction: column;
+            }
+
+            .sub_heading_border{
+                background-color: blue;
+            }
+
+            .qualification_border{
+                padding: 0;
+                margin: 0;  
+            }
+
+            .qualification_border:hover{
+                border: 1px solid #0087ca;  
+                border-radius: 5px;
+                margin-top: 10px;
+                margin-left: 10px;
+                margin-right: 10px;
+                margin-bottom: 10px;              
+            }
+            
+            .qualification_header{
+                display: flex;
+                flex-direction: row;  
+                flex: 1;
+                margin-top: 0px;
+                border-radius: 5px; 
+            }
+
+            .qualification_header:hover{
+                background-color:#0087ca;
+                margin-top: 0px;               
+                border-radius: 5px;                
+            }
+
+            .start{
+                display: flex;  
+                flex-direction: row;  
+            }
+
+            .end{  
+                display: flex;     
+                flex-direction: row; 
+                     
+                flex: 1;
+                align-items: end;
+                justify-content: flex-end;
+            }
+
+            
+            
+            
+        </style>  
+        <script>
+            function show(id) {
+                document.getElementById(id).style.display = 'flex';              
+            }
+            function hide(id) {
+                document.getElementById(id).style.display = 'none';             
+            }
+            function hide_and_show(show, hide) {
+                document.getElementById(show).style.display = 'flex';
+                document.getElementById(hide).style.display = 'none';
+                              
+            }
+            function show_and_modify(id, text, year) {
+                document.getElementById(id).style.display = 'flex'; 
+                document.getElementById(text).style.fontSize = '40px'; 
+                document.getElementById(text).style.color = 'white'; 
+                document.getElementById(year).style.fontSize = '40px'; 
+                document.getElementById(year).style.color = 'white';              
+            }            
+            function hide_and_modify(id, text, year) {
+                document.getElementById(id).style.display = 'none';
+                document.getElementById(text).style.fontSize = '30px'; 
+                document.getElementById(text).style.color = 'black'; 
+                document.getElementById(year).style.fontSize = '30px'; 
+                document.getElementById(year).style.color = 'black';                
+            }
+            
+          </script>              
+    </head>
+    <body>  
+        <div class="gradient-border" id="interactive_cv" onmouseout="hide_and_show('curriculum_vitae', 'interactive_cv')">
+            Interactive CV   
+        </div>  
+        <div class="CV_background">   
+            <div class="CV_Heading_Style" id="curriculum_vitae" onmouseover="hide_and_show('interactive_cv', 'curriculum_vitae')">           
+                Curriculum Vitae   
+            </div>
+        </div>  
+        <div class="column">        
+            <div class="column1">
+                <img class="pic" src="https://media-exp1.licdn.com/dms/image/C4D03AQF-R4q-4QtpiA/profile-displayphoto-shrink_800_800/0/1662963357850?e=2147483647&amp;v=beta&amp;t=xGs__NDMu64YnxGti4rvCgTTLUuKElMI61t9F4aMYig">
+                <div class="name">
+                    <p>Usman Mustafa Khawar</p>
+                </div>
+                <div class="contact_heading">
+                    <p>Contact Me</p>
+                </div>
+                <div class="contact_details">
+                    <p>&#128222;+923009293477</p>
+                    <a href="mailto:xerone.9@gmail.com">&#9993;xerone.9@gmail.com</a>
+                    <a onclick=" window.open('https://www.linkedin.com/in/usman-mustafa-khawar-41374a234/','_blank')">Linkedin</a>   
+                    <a onclick=" window.open('https://softwares.rubick.org/','_blank')">softwares.rubick.org</a>                    
+                </div>
+                <div class="language_heading">
+                    <p>Programming...</p>
+                </div>
+                <div>
+                    <div class="language_details_row">                    
+                        <div class="language_name" onmouseover="show('python_level')" onmouseout="hide('python_level')">
+                            <p>Python</p>               
+                        </div>
+                        <div class="python">
+                            <div class="pythoncolor"></div>
+                        </div>                  
+                    </div>
+                    <div class="skill_detail", id="python_level">
+                        <div class="language_details_row">                    
+                            <div class="language_details_name">
+                                <p>Basic</p>               
+                            </div>
+                            <div class="ninty-nine">
+                                <div class="ninty-ninecolor"></div>
+                            </div>                  
+                        </div>
+                        <div class="language_details_row">                    
+                            <div class="language_details_name">
+                                <p>Standalone libs</p>               
+                            </div>
+                            <div class="seventy-five">
+                                <div class="seventy-fivecolor"></div>
+                            </div>                  
+                        </div>
+                        <div class="language_details_row">                    
+                            <div class="language_details_name">
+                                <p>Net Framework</p>               
+                            </div>
+                            <div class="twenty-five">
+                                <div class="twenty-fivecolor"></div>               
+                            </div>                    
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="language_details_row">                    
+                        <div class="language_name" onmouseover="show('wordpress_level')" onmouseout="hide('wordpress_level')">
+                            <p>Wordpress</p>               
+                        </div>
+                        <div class="wordpress">
+                            <div class="wordpresscolor"></div>
+                        </div> 
+                    </div>
+                    <div class="skill_detail", id="wordpress_level">
+                        <div class="language_details_row">                    
+                            <div class="language_details_name">
+                                <p>Static Website</p>               
+                            </div>
+                            <div class="ninty-nine">
+                                <div class="ninty-ninecolor"></div>
+                            </div>                  
+                        </div>
+                        <div class="language_details_row">                    
+                            <div class="language_details_name">
+                                <p>Woo Commerce </p>               
+                            </div>
+                            <div class="seventy-five">
+                                <div class="seventy-fivecolor"></div>
+                            </div>                  
+                        </div>
+                        <div class="language_details_row">                    
+                            <div class="language_details_name">
+                                <p>Plugin Modification</p>               
+                            </div>
+                            <div class="ten">
+                                <div class="tencolor"></div>               
+                            </div>                    
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="language_details_row">                    
+                        <div class="language_name" onmouseover="show('apex_level')" onmouseout="hide('apex_level')">
+                            <p>Oracle Apex</p>               
+                        </div>
+                        <div class="apex">
+                            <div class="apexcolor"></div>
+                        </div> 
+                    </div>
+                    <div class="skill_detail", id="apex_level">
+                        <div class="language_details_row">                    
+                            <div class="language_details_name">
+                                <p>Basic</p>               
+                            </div>
+                            <div class="seventy-five">
+                                <div class="seventy-fivecolor"></div>
+                            </div>                  
+                        </div>
+                        <div class="language_details_row">                    
+                            <div class="language_details_name">
+                                <p>Standard Form / DB</p>               
+                            </div>
+                            <div class="fifty">
+                                <div class="fiftycolor"></div>
+                            </div>                  
+                        </div>
+                        <div class="language_details_row">                    
+                            <div class="language_details_name">
+                                <p>Advance</p>               
+                            </div>
+                            <div class="ten">
+                                <div class="tencolor"></div>               
+                            </div>                    
+                        </div>
+                    </div>
+                </div>   
+                <div>
+                    <div class="language_details_row">                    
+                        <div class="language_name" onmouseover="show('kotlin_level')" onmouseout="hide('kotlin_level')">
+                            <p>Kotlin</p>               
+                        </div>
+                        <div class="kotlin">
+                            <div class="kotlincolor"></div>
+                        </div> 
+                    </div>
+                    <div class="skill_detail", id="kotlin_level">
+                        <div class="language_details_row">                    
+                            <div class="language_details_name">
+                                <p>Basic</p>               
+                            </div>
+                            <div class="fifty">
+                                <div class="fiftycolor"></div>
+                            </div>                  
+                        </div>
+                        <div class="language_details_row">                    
+                            <div class="language_details_name">
+                                <p>One Page Android App</p>               
+                            </div>
+                            <div class="fifty">
+                                <div class="fiftycolor"></div>
+                            </div>                  
+                        </div>
+                        <div class="language_details_row">                    
+                            <div class="language_details_name">
+                                <p>Net Base Android App</p>               
+                            </div>
+                            <div class="ten">
+                                <div class="tencolor"></div>               
+                            </div>                    
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="language_details_row">                    
+                        <div class="language_name" onmouseover="show('sql_level')" onmouseout="hide('sql_level')">
+                            <p>SQL</p>               
+                        </div>
+                        <div class="sql">
+                            <div class="sqlcolor"></div>
+                        </div> 
+                    </div>
+                    <div class="skill_detail", id="sql_level">
+                        <div class="language_details_row">                    
+                            <div class="language_details_name">
+                                <p>Basic</p>               
+                            </div>
+                            <div class="seventy-five">
+                                <div class="seventy-fivecolor"></div>
+                            </div>                  
+                        </div>
+                        <div class="language_details_row">                    
+                            <div class="language_details_name">
+                                <p>Single Queries</p>               
+                            </div>
+                            <div class="seventy-five">
+                                <div class="seventy-fivecolor"></div>
+                            </div>                  
+                        </div>
+                        <div class="language_details_row">                    
+                            <div class="language_details_name">
+                                <p>SQL Functions</p>               
+                            </div>
+                            <div class="ten">
+                                <div class="tencolor"></div>               
+                            </div>                    
+                        </div>
+                    </div>
+                </div> 
+                <div>
+                    <div class="language_details_row">                    
+                        <div class="language_name" onmouseover="show('html_level')" onmouseout="hide('html_level')">
+                            <p>HTML, CSS, JS</p>               
+                        </div>
+                        <div class="html">
+                            <div class="htmlcolor"></div>
+                        </div> 
+                    </div>
+                    <div class="skill_detail", id="html_level">
+                        <div class="language_details_row">                    
+                            <div class="language_details_name">
+                                <p>HTML</p>               
+                            </div>
+                            <div class="seventy-five">
+                                <div class="seventy-fivecolor"></div>
+                            </div>                  
+                        </div>
+                        <div class="language_details_row">                    
+                            <div class="language_details_name">
+                                <p>JS</p>               
+                            </div>
+                            <div class="fifty">
+                                <div class="fiftycolor"></div>
+                            </div>                  
+                        </div>
+                        <div class="language_details_row">                    
+                            <div class="language_details_name">
+                                <p>CSS</p>               
+                            </div>
+                            <div class="twenty-five">
+                                <div class="twenty-fivecolor"></div>               
+                            </div>                    
+                        </div>
+                    </div>
+                </div>  
+                <div>
+                    <div class="language_details_row">                    
+                        <div class="language_name" onmouseover="show('php_level')" onmouseout="hide('php_level')">
+                            <p>PHP</p>               
+                        </div>
+                        <div class="php">
+                            <div class="phpcolor"></div>
+                        </div> 
+                    </div>
+                    <div class="skill_detail", id="php_level">
+                        <div class="language_details_row">                    
+                            <div class="language_details_name">
+                                <p>Basic</p>               
+                            </div>
+                            <div class="twenty-five">
+                                <div class="twenty-fivecolor"></div>
+                            </div>                  
+                        </div>
+                        <div class="language_details_row">                    
+                            <div class="language_details_name">
+                                <p>Fetch / Send Data</p>               
+                            </div>
+                            <div class="twenty-five">
+                                <div class="twenty-fivecolor"></div>
+                            </div>                  
+                        </div>
+                        <div class="language_details_row">                    
+                            <div class="language_details_name">
+                                <p>Database APIs</p>               
+                            </div>
+                            <div class="twenty-five">
+                                <div class="twenty-fivecolor"></div>               
+                            </div>                    
+                        </div>
+                    </div>
+                </div> 
+                <div class="language_details_row">                    
+                    <div class="language_name">
+                        <p>Java</p>               
+                    </div>
+                    <div class="java">
+                        <div class="javacolor"></div>                
+                    </div>                    
+                </div>               
+                <div class="language_details_row">                    
+                    <div class="language_name">
+                        <p>C++</p>               
+                    </div>
+                    <div class="cplusplus">
+                        <div class="cpluspluscolor"></div>                
+                    </div>                    
+                </div>
+            </div>                
+            <div class="column2">
+                <div class="objective_border">                                            
+                    <div class="carrier_objective_heading" id='bg3'>
+                        <p>Carrier Objective: </p>                        
+                    </div>  
+                    <div class="objective_text">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni molestiae ullam ex qui possimus quidem provident earum maxime dolorum voluptatem rem pariatur facilis, distinctio, similique accusantium error. Quod, optio quisquam?</p>
+                    </div>
+                </div>
+                <div class="div_border">                    
+                    <div class="carrier_objective_heading">
+                        <p>Qualifications: </p>                                      
+                    </div> 
+                    <div class="qualification_border">
+                        <div class="qualification_heading">
+                            <div class="qualification_header" onmouseover="show_and_modify('master_detail', 'master_text', 'master_year')" onmouseout="hide_and_modify('master_detail', 'master_text', 'master_year')">                           
+                                <div class=start>
+                                    <div class="masters_text" id="master_text">
+                                        <p>Masters</p>               
+                                    </div>
+                                </div>
+                                <div class="end">
+                                    <div class="qualification_Year" id="master_year">
+                                        <p>2017</p>               
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="qualification_detail" id="master_detail">
+                            <div class="qualification_sub_detail_ask">
+                                <p>M.B.A</p>               
+                            </div>
+                            <div class="qualification_sub_detail_ask">
+                                <p>Discipline:</p>  
+                            </div> 
+                            <div class="qualification_sub_detail_reply">
+                                <p>Finance</p>  
+                            </div>
+                            <div class="qualification_sub_detail_ask">
+                                <p>GPA:</p>  
+                            </div> 
+                            <div class="qualification_sub_detail_reply">
+                                <p>3.4</p>  
+                            </div>           
+                        </div>
+                    </div>  
+                    <div class="qualification_border">
+                        <div class="qualification_heading">
+                            <div class="qualification_header" onmouseover="show_and_modify('graduation_detail', 'graduation_text', 'graduation_year')" onmouseout="hide_and_modify('graduation_detail', 'graduation_text', 'graduation_year')">                           
+                                <div class="start">
+                                    <div class="graduation_text" id="graduation_text">
+                                        <p>Graduation</p>               
+                                    </div>
+                                </div>     
+                                <div class="end">               
+                                    <div class="qualification_Year" id="graduation_year">
+                                        <p>2014</p>               
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="qualification_detail" id="graduation_detail">  
+                            <div class="grand_detail">
+                                <div class="graduation_detail">  
+                                    <div class="qualification_sub_detail_ask">
+                                        <p>B-Tech (Pass)</p>               
+                                    </div>
+                                    <div class="qualification_sub_detail_ask">
+                                        <p>Major Subject:</p>  
+                                    </div> 
+                                    <div class="qualification_sub_detail_reply">
+                                        <p>Electronics</p>  
+                                    </div>
+                                    <div class="qualification_sub_detail_ask">
+                                        <p>Percentage:</p>  
+                                    </div> 
+                                    <div class="qualification_sub_detail_reply">
+                                        <p>3.4 GPA</p>  
+                                    </div>                             
+                                </div>   
+                                <div class="graduation_detail">  
+                                    <div class="qualification_sub_detail_ask">
+                                        <p>B-Tech (Hon)</p>               
+                                    </div>
+                                    <div class="qualification_sub_detail_ask">
+                                        <p>Major Subject:</p>  
+                                    </div> 
+                                    <div class="qualification_sub_detail_reply">
+                                        <p>Electronics</p>  
+                                    </div> 
+                                    <div class="qualification_sub_detail_ask">
+                                        <p>Percentage:</p>  
+                                    </div>  
+                                    <div class="qualification_sub_detail_reply">
+                                        <p>3.4 GPA</p>  
+                                    </div>           
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="qualification_border">                                 
+                        <div class="qualification_heading">
+                            <div class="qualification_header" onmouseover="show_and_modify('inter_detail', 'inter_text', 'inter_year')" onmouseout="hide_and_modify('inter_detail', 'inter_text', 'inter_year')">                           
+                                <div class="start">
+                                    <div class="inter_text"  id="inter_text">
+                                        <p>Intermediate</p>               
+                                    </div>
+                                </div>
+                                <div class="end">
+                                    <div class="qualification_Year"  id="inter_year">
+                                        <p>2010</p>               
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="qualification_detail" id="inter_detail">
+                            <div class="qualification_sub_detail_ask">
+                                <p>D.A.E</p>               
+                            </div>
+                            <div class="qualification_sub_detail_ask">
+                                <p>Major Subject:</p>  
+                            </div> 
+                            <div class="qualification_sub_detail_reply">
+                                <p>Electronics</p>  
+                            </div>
+                            <div class="qualification_sub_detail_ask">
+                                <p>Percentage:</p>  
+                            </div> 
+                            <div class="qualification_sub_detail_reply">
+                                <p>70%</p>  
+                            </div>           
+                        </div> 
+                    </div>  
+                    <div class="qualification_border">                                        
+                        <div class="qualification_heading">
+                            <div class="qualification_header" onmouseover="show_and_modify('matric_detail', 'matric_text', 'matric_year')" onmouseout="hide_and_modify('matric_detail', 'matric_text', 'matric_year')">
+                                <div class="start">
+                                    <div class="matric_text" id="matric_text">
+                                        Matriculation              
+                                    </div>  
+                                </div>  
+                                <div class="end">                 
+                                    <div class="qualification_Year" id="matric_year">
+                                        <p>2008</p>               
+                                    </div> 
+                                </div>
+                            </div>                   
+                        </div>
+                        <div class="qualification_detail" id="matric_detail">
+                            <div class="qualification_sub_detail_ask">
+                                <p>Major Subject: </p>               
+                            </div>
+                            <div class="qualification_sub_detail_reply">
+                                <p>Biology</p>               
+                        </div>
+                            <div class="qualification_sub_detail_ask">
+                                <p>Percentage:</p>  
+                            </div>
+                            <div class="qualification_sub_detail_reply">
+                                <p>70%</p>  
+                            </div>             
+                        </div>  
+                    </div>
+                    
+                                         
+                </div> 
+                <div class="div_border">                    
+                    <div class="other_heading">
+                        <p>Work Experience: </p>            
+                    </div>                     
+                    <div class="qualification_border">  
+                        <div class="qualification_heading">
+                            <div class="qualification_header" onmouseover="show_and_modify('indus_detail', 'indus_text', 'indus_year')" onmouseout="hide_and_modify('indus_detail', 'indus_text', 'indus_year')">
+                                <div class="indus_text" id="indus_text">
+                                    <p>Indus University</p>               
+                                </div>                    
+                                <div class="qualification_Year" id="indus_year">
+                                    <p>Since 2012</p>               
+                                </div>
+                            </div>
+                        </div>
+                        <div class="qualification_detail" id="indus_detail"> 
+                            <div class="grand_detail"> 
+                                <div class="graduation_detail">  
+                                    <div class="job_sub_heading_text">
+                                        <p>Job Description</p>               
+                                    </div>                         
+                                </div>   
+                                <div class="graduation_detail">  
+                                    <div class="job_description_text">
+                                        <li>Student Fee Deposits</li>               
+                                        <li>Student Fee Related Queries</li> 
+                                        <li>Bank Monthly Reconcilliation</li>
+                                        <li>Monthly Bank Book</li> 
+                                    </div>            
+                                </div>
+                            </div>  
+                        </div>
+                    </div>
+                    <div class="qualification_border">                           
+                        <div class="qualification_heading">
+                            <div class="qualification_header" onmouseover="show_and_modify('it_detail', 'peshawar_text', 'peshawar_year')" onmouseout="hide_and_modify('it_detail', 'peshawar_text', 'peshawar_year')">
+                                <div class="start">
+                                    <div class="microsystem_text" id="peshawar_text">
+                                        <p>Microsystem (Peshawar)</p>               
+                                    </div>
+                                </div>
+                                <div class="end">                    
+                                    <div class="qualification_Year" id="peshawar_year">
+                                        <p>2007-2008</p>               
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>                        
+                        <div class="qualification_detail" id="it_detail"> 
+                            <div class="grand_detail"> 
+                                <div class="graduation_detail">  
+                                    <div class="job_sub_heading_text">
+                                        <p>Job Description</p>               
+                                    </div>                         
+                                </div>   
+                                <div class="graduation_detail">  
+                                    <div class="job_description_text">
+                                        <li>PC Installation</li>               
+                                        <li>Networking</li> 
+                                        <li>Repair & Maintenance</li>
+                                        <li>Software Installation</li>               
+                                        <li>Anydesk</li> 
+                                        <li>Troubleshooting</li>  
+                                    </div>            
+                                </div>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+                <div class="skill_border">                    
+                    <div class="other_heading">
+                        <p>Skills: </p>            
+                    </div>                            
+                    <div class="qualification_heading">
+                        <div class="skill_text">
+                            <li>Microsft Excel</li>
+                            <li>PC Automation</li>
+                            <li>Web Development</li> 
+                            <li>App Development</li>
+                            <li>Microsoft Access</li>  
+                            <li>E.R.P</li>                                 
+                        </div> 
+                        <div class="orientation">
+                            <div class="skill_text2">
+                                <li>Data Series Analysis</li>
+                                <li>Bank Reconcilliation</li>
+                                <li>Income Statement</li> 
+                                <li>Profit And Loss</li>
+                                <li>Trial Balance</li> 
+                                <li>T- Ledger</li>           
+                            </div> 
+                        </div>  
+                    </div>
+                </div>   
+            </div>
+            <div class="column">        
+                <div class="column3">                    
+                    <div class="project_heading">
+                        <p>Projects</p>
+                    </div>
+                    <div class="python_border">
+                        <div class="project_name">
+                            <div class="python-triangle"></div>
+                            <p>Python</p>
+                        </div> 
+                        <div class="project_text">
+                            <li class="si" onmouseover="show('multi-words-replace')" onmouseout="hide('multi-words-replace')">Excel Multi-Words Replace</li>
+                            <div class="ispython" id="multi-words-replace">                                
+                                <li><span>tkinter</span></li>  
+                                <li><span>openpyxl</span></li>                                                             
+                            </div>
+                            <li class="si" onmouseover="show('amount-translator')" onmouseout="hide('amount-translator')">Amount Translator</li>
+                            <div class="ispython" id="amount-translator"> 
+                                <li><span>python dictionary</span></li>
+                            </div>
+                            <li class="si" onmouseover="show('file-lister')" onmouseout="hide('file-lister')">Drive Excel File Lister</li>
+                            <div class="ispython" id="file-lister">                                
+                                <li><span>tkinter</span></li> 
+                                <li><span>openpyxl</span></li> 
+                            </div> 
+                            <li class="si" onmouseover="show('pic-resizer')" onmouseout="hide('pic-resizer')">Multi Pic Resizer</li>
+                            <div class="ispython" id="pic-resizer">                                
+                                <li><span>tkinter</span></li>  
+                                <li><span>pillow</span></li>  
+                            </div>  
+                            <li class="si" onmouseover="show('pdf-highlighter')" onmouseout="hide('pdf-highlighter')">PDF HIghlighter</li> 
+                            <div class="ispython" id="pdf-highlighter">                                
+                                <li><span>tkinter</span></li>
+                                <li><span>py2pdf</span></li>                                                      
+                            </div>   
+                            <li class="si" onmouseover="show('class-scheduler')" onmouseout="hide('class-scheduler')">Class Scheduler</li> 
+                            <div class="ispython" id="class-scheduler">                                
+                                <li><span>tkinter</span></li>
+                                <li><span>sqllite, openpyxl</span></li> 
+                            </div> 
+                            <li class="si" onmouseover="show('inventory')" onmouseout="hide('inventory')">Inventory & Sales</li>  
+                            <div class="ispython" id="inventory">                                
+                                <li><span>tkinter</span></li>
+                                <li><span>sqllite, FPDF2</span></li>  
+                            </div>      
+                        </div>
+                    </div> 
+                    <div class="android_border"> 
+                        <div class="project_name">
+                            <div class="kotlin-triangle"></div>
+                            <p>Android Studio</p>
+                        </div> 
+                        <div class="project_text">
+                            <li class="si" onmouseover="show('k-electic')" onmouseout="hide('k-electic')">K-Electric Bill Calculator</li>
+                            <div class="iskotlin" id="k-electic">Kotlin</div>
+                            <li class="si" onmouseover="show('water')" onmouseout="hide('water')">Water Ledger</li>
+                            <div class="iskotlin" id="water">Kotlin</div>
+                            <li class="si" onmouseover="show('mobile-number')" onmouseout="hide('mobile-number')">Name To Mobile Number</li> 
+                            <div class="iskotlin" id="mobile-number">Kotlin</div>
+                            <li class="si" onmouseover="show('fee-deposits')" onmouseout="hide('fee-deposits')">Institute Students Fee Deposits</li>  
+                            <div class="isjava" id="fee-deposits">Java</div>
+                            <li class="si" onmouseover="show('bmi')" onmouseout="hide('bmi')">BMI Calculator</li>         
+                            <div class="iskotlin" id="bmi">Kotlin</div>
+                        </div> 
+                    </div> 
+                    <div class="html_border">
+                        <div class="project_name">
+                            <div class="html-triangle"></div>
+                            <p>HTML</p>
+                        </div> 
+                        <div class="project_text">
+                            <li><a href="https://caterers.rubick.org/quick-estimation.html" target="_blank">Catering Auto Menu Calculation</a></li>
+                            <li><a href="https://indus.rubick.org/accounts/fee_vouchers.php" target="_blank">Student Voucher Query / Update</a></li>                            
+                            <li>This Resume</li>                                 
+                        </div> 
+                    </div> 
+                    <div class="codes_availabe_here">
+                       <p>All Codes And Installers Are</p>  
+                       <p>Available Here</p> 
+                       <button type="button" class="github-buttons" onclick=" window.open('https://github.com/xerone9','_blank')">Github</button>                                                      
+                    </div>                      
+                </div>
+            </div>                      
+        </div>        
+    </body>
+</html>

@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Nunito+Sans:wght@700&display=swap" rel="stylesheet">
+        <style>
+            body {
+                height: 842px;
+                width: 595px;
+                /* to centre page on screen*/
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            p{
+                margin: 0;
+                font-family: 'Lato', sans-serif;
+            }
+
+            div{
+                margin: 0;
+            }
+
+            .name_header{
+                display: flex;
+                flex-direction: column;
+                flex: 1;
+                align-items: center;
+                justify-content: center;                
+                border-bottom: 5px solid rgb(62, 62, 63);  
+                padding-top: 15px;
+                padding-bottom: 30px;                          
+            }
+
+            @font-face { font-family: DIN Next Rounded LT Pro Bold; src: url('DIN Next Rounded LT Pro Bold.ttf'); } 
+            
+            .header_heading{
+                /* font-family: 'Nunito Sans', sans-serif; */
+                font-family: DIN Next Rounded LT Pro Bold;
+                font-size: 32px;
+                color: rgb(62, 62, 63);
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+            }
+
+            .header_sub_heading{
+                /* font-family: 'Nunito Sans', sans-serif; */
+                font-family: 'Lato', sans-serif;
+                font-size: 18px;
+                color: rgb(62, 62, 63);                
+                text-transform: uppercase;                
+            }
+
+            .data_block{
+                display: flex;
+                flex-direction: row;
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+
+            .biography_block{    
+                margin: 0;           
+                display: flex;
+                flex-direction: column;
+                flex: 1;
+                align-items: flex-end;
+                margin-top: 0px;
+                margin-right: 10px;
+            }
+
+            .qualification_block{
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                flex: 1;
+                margin-left: 10px;
+            }
+
+            .skill_progress_block {
+                display: flex;
+                flex-direction: column;
+                padding-right: 20px;
+            }
+
+            .main_heading{
+                color: rgb(62, 62, 63);
+                font-size: 27px;
+                font-family: DIN Next Rounded LT Pro Bold;
+                font-weight: bold;
+                margin-bottom: 20px;
+                margin-top: 10px;
+            }
+
+            .sub_heading, .skill_sub_heading, .skill_sub_heading2, .skill_sub_heading3{
+                color: rgb(62, 62, 63);
+                font-family: DIN Next Rounded LT Pro Bold;
+                font-size: 20px;
+                font-weight: 700;
+                margin-bottom: 2px;
+                margin-top: 4px;
+            }
+
+            .skill_heading{                
+                margin-bottom: 2px;
+            }
+
+            .skill_sub_heading{               
+                margin-bottom: 15px;
+            }
+
+            .skill_sub_heading2{ 
+                margin-top: 7px;              
+                margin-bottom: 15px;
+            }
+
+            .skill_sub_heading3{ 
+                margin-top: 13px;              
+                margin-bottom: 15px;
+            }
+
+            .subest_heading{
+                color: rgb(62, 62, 63);
+                font-size: 18px;
+                font-weight: bold;
+                margin-bottom: 8px;
+            }
+
+            .biography-content, .content, .qualification_content, .contact_content, .languages{
+                color: rgb(62, 62, 63);                
+            }            
+
+            .biography-content{
+                font-size: 12px;  
+                text-align: right;
+                margin-bottom: 10px;
+                line-height: 25px;
+            }
+
+            .content{
+                font-size: 12px;  
+                text-align: right;
+                margin-bottom: 10px;
+                line-height: 25px;
+            }
+
+            .qualification_content{
+                font-size: 12px; 
+                line-height: 25px; 
+                text-align: left;
+                margin-bottom: 13px;
+            } 
+            
+            .contact_content{ 
+                font-size: 12px; 
+                line-height: 25px;               
+                text-align: center; 
+                margin-bottom: 15px;               
+            } 
+
+            .languages{
+                font-size: 12px;                  
+                text-align: left;
+                margin-bottom: 6px;
+                flex: 1;
+            }             
+
+            .python, .excel, .html, .kotlin, .java, .access, .wordpress, .cplus, .sql, .php, .apex{
+                flex: 1;
+                position: relative;
+                margin-top: 5px;
+                margin-left: 8%;
+                height: 5px;
+                width: 15%;
+                max-width: 150px;                
+                background-color: lightgray;
+                border-radius: 15px;
+                margin-bottom: 0;
+            }
+
+            .python .pythoncolor{
+                position: absolute;
+                background-color: rgb(62, 62, 63);
+                width: 85%;
+                height: 5px;
+                border-radius: 15px;                  
+            }
+
+            .excel .excelcolor{
+                position: absolute;
+                background-color: rgb(62, 62, 63);
+                width: 85%;
+                height: 5px;
+                border-radius: 15px;                  
+            }
+
+            .html .htmlcolor{
+                position: absolute;
+                background-color: rgb(62, 62, 63);
+                width: 50%;
+                height: 5px;
+                border-radius: 15px;                  
+            }
+
+            .kotlin .kotlincolor{
+                position: absolute;
+                background-color: rgb(62, 62, 63);
+                width: 25%;
+                height: 5px;
+                border-radius: 15px;                  
+            }
+
+            .java .javacolor{
+                position: absolute;
+                background-color: rgb(62, 62, 63);
+                width: 20%;
+                height: 5px;
+                border-radius: 15px;                  
+            }
+
+            .access .accesscolor{
+                position: absolute;
+                background-color: rgb(62, 62, 63);
+                width: 35%;
+                height: 5px;
+                border-radius: 15px;                  
+            }
+
+            .wordpress .wordpresscolor{
+                position: absolute;
+                background-color: rgb(62, 62, 63);
+                width: 60%;
+                height: 5px;
+                border-radius: 15px;                  
+            }
+
+            .cplus .cpluscolor{
+                position: absolute;
+                background-color: rgb(62, 62, 63);
+                width: 10%;
+                height: 5px;
+                border-radius: 15px;                  
+            }
+
+            .sql .sqlcolor{
+                position: absolute;
+                background-color: rgb(62, 62, 63);
+                width: 60%;
+                height: 5px;
+                border-radius: 15px;                  
+            }
+
+            .php .phpcolor{
+                position: absolute;
+                background-color: rgb(62, 62, 63);
+                width: 20%;
+                height: 5px;
+                border-radius: 15px;                  
+            }
+
+            .apex .apexcolor{
+                position: absolute;
+                background-color: rgb(62, 62, 63);
+                width: 50%;
+                height: 5px;
+                border-radius: 15px;                  
+            }
+
+            .bar_allignment{
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: row;
+                margin-bottom: 2.9px;
+            }
+
+            .footer_block{                
+                display: flex;
+                flex-direction: row;
+                flex: 1;
+                border-top: 5px solid rgb(62, 62, 63);  
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+
+            .footer_headings{
+                margin-bottom: 7px;
+                margin-top: 7px;
+                font-family: DIN Next Rounded LT Pro Bold;
+                font-size: 22px;
+                color: rgb(62, 62, 63);
+                font-weight: 700;
+            }
+
+            .address, .connect, .contact{               
+                display: flex;
+                flex-direction: row;                
+            }
+
+            .address{               
+                flex-direction: column;
+                flex: 2;
+                font-size: 14px;
+                font-weight: bold;
+                align-items: flex-start;
+                justify-content: flex-start;
+            }
+
+            .contact{               
+                flex-direction: column;
+                flex: 1;
+                font-size: 14px;
+                font-weight: bold;
+                align-items: center;                
+            }
+
+            .connect{
+                flex-direction: column;
+                flex: 2;
+                font-size: 14px;
+                font-weight: bold;
+                align-items: flex-end;
+                               
+            }
+            
+            
+        </style>
+    </head>
+    <body>        
+        <div class="name_header">
+            <div class="header_heading">
+                USMAN&nbsp;MUSTAFA&nbsp;KHAWAR
+            </div>
+            <div class="header_sub_heading">
+                Data Analyst
+            </div>                
+        </div>
+        <div class="data_block">
+            <div class="biography_block">
+                <div class="main_heading">
+                    Biography
+                </div>
+                <div class="biography-content">
+                    <p>
+                        Working in a university for about 10 years and as the business grows the number of cash flows increases upto 65,000 vouchers with revenue upto 600 Million PKR per year. which was my job to look after. After a while I started to automate the process of every single duty assigned to me. Started by creating normal batch files to websites to full stack windows database applications
+                    </p>
+                </div>
+                <div class="main_heading">
+                    Experience
+                </div>
+                <div class="sub_heading">
+                    Freelance Working
+                </div>
+                <div class="subest_heading">
+                    Since July-2021
+                </div>
+                <div class="content">
+                    <p>
+                        Created few websites on wrodpress for customers from static single page websites to full woo-commerce integrated functional websites and also created invoicing and sales windows application suitable for catering bussiness.
+                    </p>
+                </div>
+                <div class="sub_heading">
+                    Indus University
+                </div>
+                <div class="subest_heading">
+                    Since July-2012
+                </div>
+                <div class="content">
+                    <p>
+                        As this university project is the part of the foundation. My job was to handle all the incomes either fee related, donations, and scholarships. Updating student ledgers bank ledgers preparing report for daily cash, funds available for expenditures.
+                    </p>
+                </div>                            
+            </div>
+            <div class="qualification_block">
+                <div class="main_heading">
+                    Education
+                </div>
+                <!-- <div class="sub_heading">
+                    Diploma In Associate Engeneering
+                </div>                
+                <div class="qualification_content">
+                    <p>
+                        Aligrah Institue Of Technology
+                    </p>
+                    <p>
+                        2007 - 2011
+                    </p>
+                </div>   -->
+                <div class="sub_heading">
+                    Bachelors in Technology
+                </div>                
+                <div class="qualification_content">
+                    <p>
+                        Dadabhoy Institute Of Higher Education
+                    </p>
+                    <p>
+                        2012 - 2015
+                    </p>
+                </div>   
+                <div class="sub_heading">
+                    Masters In Business Administartion
+                </div>                
+                <div class="qualification_content">
+                    <p>
+                        Indus University
+                    </p>
+                    <p>
+                        2016 - 2019
+                    </p>
+                </div> 
+                <div class="main_heading">
+                    Skills
+                </div> 
+                <div class="skill_sub_heading">
+                    Programming Languages
+                </div>
+                <div class="skill_progress_block">
+                    <div class="bar_allignment">
+                        <div class="languages">
+                            Python
+                        </div>                          
+                        <div class="python">
+                            <div class="pythoncolor"></div>
+                        </div>                            
+                    </div>   
+                    <div class="bar_allignment">
+                        <div class="languages">
+                            Kotlin
+                        </div>                          
+                        <div class="kotlin">
+                            <div class="kotlincolor"></div>
+                        </div>                            
+                    </div>   
+                    <div class="bar_allignment">
+                        <div class="languages">
+                            HTML, CSS, JS
+                        </div>                          
+                        <div class="html">
+                            <div class="htmlcolor"></div>
+                        </div>                            
+                    </div>    
+                    <div class="bar_allignment">
+                        <div class="languages">
+                            Java
+                        </div>                          
+                        <div class="java">
+                            <div class="javacolor"></div>
+                        </div>                            
+                    </div>
+                    <div class="bar_allignment">
+                        <div class="languages">
+                            PHP
+                        </div>                          
+                        <div class="php">
+                            <div class="phpcolor"></div>
+                        </div>                            
+                    </div>    
+                    <div class="bar_allignment">
+                        <div class="languages">
+                            C++
+                        </div>                          
+                        <div class="cplus">
+                            <div class="cpluscolor"></div>
+                        </div>                            
+                    </div>   
+                    <div class="skill_sub_heading3">
+                        Other Utilities
+                    </div>
+                    <div class="skill_progress_block">
+                        <div class="bar_allignment">
+                            <div class="languages">
+                                Microsoft Excel
+                            </div>                          
+                            <div class="excel">
+                                <div class="excelcolor"></div>
+                            </div>                            
+                        </div>   
+                        <div class="bar_allignment">
+                            <div class="languages">
+                                Wordpress
+                            </div>                          
+                            <div class="wordpress">
+                                <div class="wordpresscolor"></div>
+                            </div>                            
+                        </div>   
+                        <div class="bar_allignment">
+                            <div class="languages">
+                                Adobe Primier Pro CC
+                            </div>                          
+                            <div class="html">
+                                <div class="htmlcolor"></div>
+                            </div>                            
+                        </div>    
+                        <div class="bar_allignment">
+                            <div class="languages">
+                                Microsoft Access
+                            </div>                          
+                            <div class="java">
+                                <div class="javacolor"></div>
+                            </div>                            
+                        </div>
+                        <div class="bar_allignment">
+                            <div class="languages">
+                                Oracle Apex
+                            </div>                          
+                            <div class="apex">
+                                <div class="apexcolor"></div>
+                            </div>                            
+                        </div>    
+                        <div class="bar_allignment">
+                            <div class="languages">
+                                Android Studio
+                            </div>                          
+                            <div class="java">
+                                <div class="javacolor"></div>
+                            </div>                            
+                        </div> 
+                    </div>                                       
+                </div>                  
+            </div>
+        </div> 
+        <div class="footer_block">
+            <div class="address"> 
+                <div class="footer_headings">               
+                    Address
+                </div>
+                <div class="qualification_content">
+                    <p>Federal B Area</p>
+                    <p>Block-16, Karachi</p>
+                </div>
+            </div>
+            <div class="contact"> 
+                <div class="footer_headings">               
+                    Contact
+                </div>
+                <div class="contact_content">
+                    <p>0300-929-3477</p>
+                    <p>xerone.9@gmail.com </p>
+                </div>
+            </div>            
+            <div class="connect"> 
+                <div class="footer_headings">               
+                    Connect
+                </div>
+                <div class="content">
+                    <p>https://github.com/xerone9</p>  
+                </div>
+            </div>            
+        </div>               
+    </body>
+</html>

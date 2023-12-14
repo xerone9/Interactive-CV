@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <style>
+    body {
+        display: flex;
+        background-color: white; 
+        /* Set your desired background color */
+    }
+
+    body::before {
+        height: 1010px;
+        width: 1438px;
+        content: '';
+        margin: 10px;
+        position: absolute; /* Use absolute positioning */
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border-radius: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Adjust the shadow as needed */
+        background-color: #ffffff; /* Set your desired container background color */
+        z-index: -1;
+    }
+
+    .container {
+        width: 100%;
+        z-index: 1; /* Ensure the content appears above the pseudo-element */
+    }
+
+    /* Optional: Add some styling to the content inside the container */
+    .container h1 {
+        color: #333;
+    }
+
+    .container p {
+        color: #666;
+    }
+
+    .line-container {
+        height: 30px; /* Adjust the height of the line */
+    }
+
+    .line {
+      margin-left: 2px;
+      width: 1400px;
+      height: 4px; /* Adjust the thickness of the line */
+      background: linear-gradient(to right, white 14%, black 50%, white 94%);
+    }
+
+    .horizontal_line {
+      width: 4px; /* Adjust the thickness of the line */
+      height: 730px; /* Set the height of the vertical line */
+      background: linear-gradient(to bottom, white 0%, black 50%, white 100%); /* Set the color of the line */
+    }
+
+    .middle_section {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .information {
+       display: flex;
+       flex-direction: column;
+       flex-wrap: wrap;
+    }
+    .experience {
+        padding-left: 20px;
+        flex: 2;
+        margin-left: -175px;
+        font-family: Times New Roman;
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+    .top_section {
+        display: flex;
+        flex-direction: row;
+        width: 1200px;
+
+    }
+    .profile_pic {
+      width: 175px; /* Set the desired width */
+      height: 175px; /* Set the desired height */
+      border-radius: 50%; /* Make the image appear in a circle */
+      display: block; /* Remove any extra spacing around the image */
+      margin: 0 auto; /* Center the image horizontally */
+      border: 2px solid black;
+      margin: 20px;
+    }
+    .objective {
+        flex: 2;
+    }
+    li {
+      margin-left: 1.5em; /* Adjust the margin to create space between marker and text */
+      text-indent: -1.4em; /* Move the first line back by the same amount as the margin */
+      margin-bottom: 7px;
+    }
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+    
+  </style>
+  <title>Usman Mustafa Khawar</title>
+</head>
+<body>
+    <div class="container">
+        <div class="top_section">
+            <div style="margin-top: 10px;">
+                <img src="usman.png" alt="Description of the image" class="profile_pic">
+            </div>
+            <div class="objective">
+                <div style="display: flex; flex-direction: row; align-self: center; justify-content: center;">
+                    <img src="objective.png" alt="information" style="width: 40%; height: auto; margin-bottom: 10px;">
+                </div>
+                <p style="margin-top: -20px; width: 1130px; font-family: Brush Script MT; font-size: 22px;">To leverage my technical expertise and passion for automation to drive efficiency and accuracy in processes. Seeking a challenging position where I can contribute my skills in designing and implementing automated solutions to streamline workflows, reduce manual effort, and enhance overall productivity. Committed to staying abreast of emerging technologies and employing innovative approaches to optimize systems and operations. Eager to collaborate with a dynamic team to create and implement automated solutions that significantly impact the speed and precision of tasks within an organization.</p>
+            </div>
+            <div style="display: flex; flex-direction: column; margin-top: 25px;">
+                <a href="https://github.com/xerone9" style="text-decoration: none; color: #000000;">
+                    <img src="git_logo.png" alt="GitHub Icon" style="width: 30px; height: 30px; vertical-align: middle; margin-left: 10px; margin-right: 10px; filter: invert(100%); padding: 3px;">
+                </a>
+                <a href="https://www.linkedin.com/in/usman-mustafa-khawar-41374a234/" style="text-decoration: none; color: #000000;">
+                    <img src="linkedin_logo.png" alt="Linkedin Icon" style="width: 30px; height: 30px; vertical-align: middle;  margin-left: 10px; margin-right: 10px; filter: invert(100%); padding: 3px;">
+                </a>
+                <a href="https://softwares.rubick.org/" style="text-decoration: none; color: #000000;">
+                    <img src="web_logo.png" alt="Web Icon" style="width: 30px; height: 30px; vertical-align: middle;  margin-left: 10px; margin-right: 10px; filter: invert(100%); padding: 3px;">
+                </a>
+                <a href="https://www.upwork.com/freelancers/~01e2b4984cd54db890" style="text-decoration: none; color: #000000;">
+                    <img src="upwork_logo.png" alt="Upwork Icon" style="width: 30px; height: 30px; vertical-align: middle; margin-left: 10px; margin-right: 10px; filter: invert(100%); padding: 3px;">
+                </a>
+                <a href="https://www.youtube.com/channel/UCbczhEOorBjQUwFbkUG9AGg" style="text-decoration: none; color: #000000;">
+                    <img src="youtube_logo.png" alt="YouTube Icon" style="width: 30px; height: 30px; vertical-align: middle; margin-left: 10px; margin-right: 10px; filter: invert(100%); padding: 3px;">
+                </a>
+            </div>
+        </div>
+        <div class="line-container">
+            <div class="line"></div>
+        </div>
+        <div id="middle_section" class="middle_section">
+            <div class="information">
+                <img src="Information.png" alt="information" style="width: 40%; height: auto;">
+                <div style="margin-left: 40px;">
+                    <div style="display: flex; flex-direction: row;">
+                        <div style="font-family: Roboto; font-size: 20px;">
+                            Name: 
+                        </div>
+                        <div style="font-family: Brush Script MT; font-size: 25px; color: gray; margin-top: -4px; padding-left: 10px;">
+                            Usman Mustafa Khawar
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-direction: row;">
+                        <div style="font-family: Roboto; font-size: 20px;">
+                            Father Name: 
+                        </div>
+                        <div style="font-family: Brush Script MT; font-size: 25px; color: gray; margin-top: -4px; padding-left: 10px;">
+                            Khawar Rasheed
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-direction: row;">
+                        <div style="font-family: Roboto; font-size: 20px;">
+                            Email: 
+                        </div>
+                        <div style="font-family: Brush Script MT; font-size: 25px; color: gray; margin-top: -4px; padding-left: 10px;">
+                            xerone.9@gmail.com
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-direction: row;">
+                        <div style="font-family: Roboto; font-size: 20px;">
+                            Residence: 
+                        </div>
+                        <div style="font-family: Brush Script MT; font-size: 25px; color: gray; margin-top: -4px; padding-left: 10px;">
+                            Federal B Area, Block 16
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-direction: row;">
+                        <div style="font-family: Roboto; font-size: 20px;">
+                            NIC No: 
+                        </div>
+                        <div style="font-family: Arial; font-size: 23px; color: gray; margin-top: -1px; padding-left: 10px;">
+                            42401-0482284-9
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-direction: row;">
+                        <div style="font-family: Roboto; font-size: 20px;">
+                            Cell No: 
+                        </div>
+                        <div style="font-family: Arial; font-size: 23px; color: gray; margin-top: -1px; padding-left: 10px;">
+                           +923-009-293-477
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-direction: row;">
+                        <br>
+                        <!-- <div style="font-family: Times New Roman; font-size: 20px;">
+                            Facebook: 
+                        </div>
+                        <div style="font-family: Brush Script MT; font-size: 25px; color: gray; margin-top: -4px; padding-left: 10px;">
+                            Don't Contanct
+                        </div> -->
+                    </div>
+                    <div style="display: flex; flex-direction: row;">
+                        <br>
+                        <!-- <div style="font-family: Times New Roman; font-size: 20px;">
+                            Instagram: 
+                        </div>
+                        <div style="font-family: Brush Script MT; font-size: 25px; color: gray; margin-top: -4px; padding-left: 10px;">
+                            
+                        </div> -->
+                    </div>
+                </div>
+                <img src="qualifications.png" alt="information" style="width: 40%; height: auto;">
+                <div style="margin-left: 40px;">
+                    <div style="display: flex; flex-direction: row;">
+                        <div style="font-family: Roboto; font-size: 20px;">
+                            <li>M.B.A (Finance)</li>
+                        </div>
+                        <div style="font-family: Roboto; font-size: 25px; margin-top: -4px; padding-left: 10px; justify-content: right; align-items: right; align-self: right; display: flex; flex-direction: row; width: 131px;">
+                            2019
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-direction: row;">
+                        <div style="font-family: Roboto; font-size: 20px;">
+                            <li>B. Tech (Electronics)</li>
+                        </div>
+                        <div style="font-family: Roboto; font-size: 25px; margin-top: -4px; padding-left: 10px; justify-content: right; align-items: right; align-self: right; display: flex; flex-direction: row; width: 90px;">
+                            2015
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-direction: row;">
+                        <div style="font-family: Roboto; font-size: 20px;">
+                            <li>D.A.E (Electronics)</li>
+                        </div>
+                        <div style="font-family: Roboto; font-size: 25px; margin-top: -4px; padding-left: 10px; justify-content: right; align-items: right; align-self: right; display: flex; flex-direction: row; width: 107px;">
+                            2011
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-direction: row;">
+                        <div style="font-family: Roboto; font-size: 20px;">
+                            <li>Matriculation (Science)</li>
+                        </div>
+                        <div style="font-family: Roboto; font-size: 25px; margin-top: -4px; padding-left: 10px; justify-content: right; align-items: right; align-self: right; display: flex; flex-direction: row; width: 65px;">
+                            2007
+                        </div>
+                    </div>
+                </div>
+                <img src="skills.png" alt="information" style="width: 22%; height: auto;">
+                <div style="margin-left: 40px; font-family: Roboto; font-size: 20px; ">
+                    <li>Python</li>
+                    <li>Microsoft Excel</li>
+                    <li>SQL</li>
+                    <li>JS</li>
+                    <li>GitHub</li>
+                    <li>PHP</li>
+                    <li>C++</li>
+                    <li>Android Studio</li>
+                    <li>HTML</li>
+                </div>
+            </div>
+            <div class="horizontal_line" style="margin-left: -130px;">
+            </div>
+            <div style="display: flex; flex-direction: column; width: 400px; margin-left: 200px;">
+                <div class="experience" style="margin-top: -10px;">
+                    <img src="experience.png" alt="information" style="width: 40%; height: auto; ">
+                    <div style="display: flex; flex-direction: row;">
+                        <div style="font-family: Times New Roman; font-size: 20px; text-decoration: underline; font-weight: bold; width: 500px;">
+                            Indus University - Senior Accountant
+                        </div>
+                        <div style="display: flex; flex-direction: row; align-items: right; align-self: right; justify-content: right; width: 300px; margin-top: -4px; padding-left: 10px; margin-bottom: 10px;">
+                            Since 2012
+                        </div>
+                    </div>  
+                    <div style="font-family: 'Roboto';">
+                        <li>Proficiently managed and recorded daily income entries, ensuring accuracy and timeliness in financial transactions.</li>
+                        <li>Implemented automated tools to expedite the daily income entry process, reducing manual data entry errors.</li>
+                        <li>Led the monthly closing process, meticulously reconciling accounts and preparing financial statements within tight deadlines.</li>
+                        <li>Developed and implemented automated reconciliation scripts, resulting in a more efficient and error-free monthly closing process.</li>
+                        <li>Spearheaded health insurance transactions, liaising with providers and employees to ensure seamless processing of claims and policy-related matters.</li>
+                        <li>Introduced automation tools to streamline health insurance data management, enhancing the efficiency of claims processing and other services.</li>
+                    </div>
+                    <div style="display: flex; flex-direction: row; margin-top: 20px;">
+                        <div style="font-family: Times New Roman; font-size: 20px; text-decoration: underline; font-weight: bold;">
+                            Freelancer
+                        </div>
+                        <div style="display: flex; flex-direction: row; align-items: right; align-self: right; justify-content: right; width: 300px; margin-top: -4px; padding-left: 80px; margin-bottom: 10px;">
+                            Since 2021
+                        </div>
+                    </div>  
+                    <div style=" font-family: 'Roboto';">
+                        <li>Reading, Modifying and Extracting PDF Files</li>
+                        <li>Reading, Modifying and Automating Excel Files</li>
+                        <li>Automating Windows Tasks</li>
+                        <li>Database web applications and offline applications</li>
+                        <li>2d Game development</li>
+                        <li>Low Scale Accounting Base Applications</li>
+                    </div>
+                </div>
+            </div>
+            <div class="horizontal_line" style="margin-left: 20px;">
+            </div>
+            <div style="width: 370px; margin-left: 40px;">
+                <img src="Projects.png" alt="projects" style="width: 60%; height: auto; margin-top: -17px; ">
+                <div style="display: flex; flex-direction: column; font-family: Times New Roman; font-size: 20px;">
+                    <div style="display: flex; flex-direction: row;">
+                        <div style="font-family: Times New Roman; font-size: 20px; margin-top: -5px; margin-bottom: 10px; text-decoration: underline; font-weight: bold;">
+                            Indus Univesity
+                        </div>
+                    </div>
+                    <div style=" font-family: 'Roboto';">
+                        <li>Automated Monthly Closing.</li>
+                        <li>Automated Unlock E-Statements With Reading and Sending Available Balance Report</li>
+                        <li>Health Insurance Panel itegrated with Google Seets API</li>
+                        <li>Conditional Calculations For Examinations (Chrome Plugin)</li>
+                        <li>Automated Entry and Removal Of Employees In Insurace Google Sheet with sending emails to concerned (Chrome Plugin)</li>
+                        <li>Cheque Priting Reports with Amount Translators</li>
+                        <li>ERP Web Crawlers</li>
+                    </div>
+                    <div style="display: flex; flex-direction: row; margin-top: 23px;">
+                        <div style="font-family: Times New Roman; font-size: 20px; margin-top: -5px; margin-bottom: 10px; text-decoration: underline; font-weight: bold;">
+                            Self Projects
+                        </div>
+                    </div>
+                    <div style=" font-family: 'Roboto';">
+                        <li>Inventory Management Software</li>
+                        <li>Excel Automation</li>
+                        <li>Live OCR Adder</li>
+                        <li>Selenium Bots</li>
+                        <li>Wordpress Websites</li>
+                        <li>Live Applications On Web</li>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
